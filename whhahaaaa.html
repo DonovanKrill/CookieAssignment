@@ -1,0 +1,77 @@
+<html>
+  <head>
+  	<script src="/lecture12/cookies.js"> </script>
+    <script type="text/javascript"> 
+   
+    var count= Cookies.get("chocolatecookies");
+ 	if(count === undefined){
+        count = 0;
+      }
+
+    function CountFun1(){
+     count=parseInt(count)+parseInt(1);
+      var divData=document.getElementById("showCount");
+     divData.innerHTML="Number of Total Cookies: ("+count +")";
+
+     Cookies.set("chocolatecookies", count);
+    
+    }
+ 
+    </script>
+
+ <script type="text/javascript"> 
+   
+    var count= Cookies.get("lemoncookies");
+ 	if(count === undefined){
+        count = 0;
+      }
+
+    function CountFun2(){
+     count=parseInt(count)+parseInt(1);
+     var divData=document.getElementById("showCount");
+     divData.innerHTML="Number of Total Cookies: ("+count +")";
+
+    
+     Cookies.set("lemoncookies", count);
+    }
+ 
+    </script>
+ <script type="text/javascript"> 
+   
+    var count= Cookies.get("sugarcookies");
+ 	if(count === undefined){
+        count = 0;
+      }
+
+    function CountFun3(){
+     count=parseInt(count)+parseInt(1);
+     var divData=document.getElementById("showCount");
+     divData.innerHTML="Number of Total Cookies: ("+count +")";
+
+     
+     Cookies.set("sugarcookies", count);
+    }
+ 
+    </script>
+
+  
+
+  </head>
+  <body>
+    
+
+
+<input type="button" id="btnClick" value="Chocolate" onclick="CountFun1()";/>
+
+<input type="button" id="btnClick" value="Lemon" onclick="CountFun2()";/>
+ 
+
+<input type="button" id="btnClick" value="Sugar" onclick="CountFun3()";/>
+
+<div id="showCount"></div>
+
+<input type="button" id="btnClick" value="Clear Cookies!" onclick="delete_cookie()";</>
+
+
+  </body>
+</html>
